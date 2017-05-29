@@ -46,14 +46,15 @@ alpha=0.05
 
 mkdir -p log
 
-# Generates the significant pathways files and metadata from the
-# feature overrepresentation analysis on all models in $ensemble_directory.
+# Generates the significant pathways and network files from the
+# feature overrepresentation analysis on all models in $nmf_dir.
 python run_network_creation.py $nmf_dir $network_output_dir $pathway_file \
 --n-genes=$N_genes --n-features=$N_features \
 --signature=NMF --signature-args=$std_cutoff \
 --alpha=$alpha --n-cores=$N_cores --shorten=PAO1_KEGG \
 --overlap-correction --all-genes \
 > ./log/analysis_PAO1_NMF.log
+
 
 # Builds a network of pathway co-occurrence relationships for
 # each of the models and applies the permutation test to these.

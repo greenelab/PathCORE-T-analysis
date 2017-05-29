@@ -1,0 +1,41 @@
+pw0	pw1	pvalue	qvalue	odds_ratio
+Dipeptide transport system	Tyrosine metabolism PAO1	0.0	0.0	3.742086752637749
+Pyrimidine metabolism PAO1	Thiamine metabolism PAO1	0.0014	0.043855	1.9671361502347418
+NitT/TauT family transport system	Sulfur metabolism PAO1	0.0	0.0	2.9184100418410037
+Cytochrome c oxidase, cbb3-type	Valine, leucine and isoleucine degradation PAO1	0.0	0.0	3.512650110761338
+Purine metabolism PAO1	Ribosome PAO1	0.0	0.0	3.3687014428412874
+RNA degradation PAO1	Ribosome PAO1	0.0	0.0	3.62736660929432
+Dipeptide transport system	Valine, leucine and isoleucine degradation PAO1	0.0	0.0	3.7894661514240733
+Folate biosynthesis PAO1	Terpenoid backbone biosynthesis PAO1	0.0004	0.0192769230769	1.980099502487562
+D-Methionine transport system	Putative polar amino acid transport system	0.001	0.0368529411765	1.9696969696969697
+Iron complex transport system	Zinc transport system	0.0	0.0	2.898686679174484
+Putative polar amino acid transport system	Sulfur metabolism PAO1	0.0	0.0	3.782198952879581
+Glyoxylate and dicarboxylate metabolism PAO1	Valine, leucine and isoleucine degradation PAO1	0.001	0.0368529411765	2.7497824735860785
+Cyanoamino acid metabolism PAO1	Quorum sensing PAO1	0.0	0.0	3.8724201248622845
+D-Methionine transport system	NitT/TauT family transport system	0.0	0.0	2.0
+Citrate cycle (TCA cycle) PAO1	Purine metabolism PAO1	0.0008	0.032335483871	3.5577383804504072
+Oxidative phosphorylation PAO1	Ribosome, bacteria	0.0002	0.0113909090909	2.386830433299215
+Lipopolysaccharide biosynthesis PAO1	Protein export PAO1	0.0002	0.0113909090909	3.7065502183406114
+2-Oxocarboxylic acid metabolism PAO1	Purine metabolism PAO1	0.001	0.0368529411765	3.226047904191617
+Bacterial chemotaxis PAO1	Flagellar assembly PAO1	0.0	0.0	5.194246160501839
+Benzoate degradation PAO1	Valine, leucine and isoleucine degradation PAO1	0.0	0.0	3.5607433573951774
+Oxidative phosphorylation PAO1	Ribosome PAO1	0.0	0.0	3.0823859211960754
+Tyrosine metabolism PAO1	Valine, leucine and isoleucine degradation PAO1	0.0	0.0	2.6071540306601313
+Phosphate transport system	Phosphonate and phosphinate metabolism PAO1	0.0	0.0	2.8872549019607843
+Glycine betaine/proline transport system	Glycine, serine and threonine metabolism PAO1	0.0	0.0	2.862533692722372
+Citrate cycle (TCA cycle) PAO1	Oxidative phosphorylation PAO1	0.0006	0.025924137931	3.3876309564041907
+D-Methionine transport system	Sulfur metabolism PAO1	0.0004	0.0192769230769	1.9869706840390882
+2-Oxocarboxylic acid metabolism PAO1	Glycolysis / Gluconeogenesis PAO1	0.0012	0.0406378378378	3.1247264770240704
+Dipeptide transport system	Glyoxylate and dicarboxylate metabolism PAO1	0.0006	0.025924137931	3.2336073408526094
+Glycolysis / Gluconeogenesis PAO1	Oxidative phosphorylation PAO1	0.0014	0.043855	3.0096325365679633
+Aminobenzoate degradation PAO1	Benzoate degradation PAO1	0.0	0.0	4.165264928511354
+Purine metabolism PAO1	Ribosome, bacteria	0.0012	0.0406378378378	2.7943645521570915
+Cytochrome c oxidase, cbb3-type	Dipeptide transport system	0.0006	0.025924137931	3.240117130307467
+Citrate cycle (TCA cycle) PAO1	Ribosome PAO1	0.0002	0.0113909090909	3.2591554231645348
+Folate biosynthesis PAO1	One carbon pool by folate PAO1	0.0014	0.043855	1.9542483660130718
+Ribosome PAO1	Ribosome, bacteria	0.0	0.0	4.088753202856675
+Quorum sensing PAO1	Vanadium resistance, efflux pump MexGHI-OpmD	0.0	0.0	3.8651315789473686
+Oxidative phosphorylation PAO1	Purine metabolism PAO1	0.0004	0.0192769230769	3.8772222222222226
+RNA degradation PAO1	Ribosome, bacteria	0.0004	0.0192769230769	3.040550267935695
+Lipopolysaccharide biosynthesis PAO1	Terpenoid backbone biosynthesis PAO1	0.0008	0.032335483871	1.9737704918032786
+Glutamate/aspartate transport system	Putrescine transport system	0.0012	0.0406378378378	2.754525706010138

@@ -304,3 +304,4 @@ if __name__ == "__main__":
     db.pathcore_edge_data.create_index(
          [("edge", ASCENDING),
           ("weight_odds_ratio", ASCENDING)])
+    print("Completed the PathCORE demo server insert operations")

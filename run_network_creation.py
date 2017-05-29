@@ -30,8 +30,8 @@ Output (all .tsv files):
 
 Usage:
     run_network_creation.py
-        <models-dir> <output-dir> <pathway-definitions> <n-genes>
-        [--n-features=<n-features>]
+        <models-dir> <output-dir> <pathway-definitions>
+        [--n-genes=<n-genes>] [--n-features=<n-features>]
         [--signature=<signature>] [--signature-args=<s-args>]
         [--alpha=<alpha>]
         [--genes-list=<genes-list>]
@@ -56,7 +56,7 @@ Options:
                                 Formatted as tab-delimited columns:
                                 pathway, N (num. genes), geneA;geneB;...geneN
 
-    <n-genes>                   Number of genes for which we have recorded
+    --n-genes=<n-genes>         Number of genes for which we have recorded
                                 expression values in the original dataset
 
     --n-features=<n-features>   Number of constructed features in each model
@@ -252,7 +252,9 @@ if __name__ == "__main__":
     output_directory = arguments["<output-dir>"]
     pathway_definitions_file = arguments["<pathway-definitions>"]
 
-    n_genes = int(arguments["<n-genes>"])
+    n_genes = None
+    if arguments["--n-genes"]:
+        n_genes = int(arguments["--n-genes"])
     n_features = int(arguments["--n-features"])
 
     if arguments["--signature"] not in GENE_SIGNATURE_DEFINITIONS:

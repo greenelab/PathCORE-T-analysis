@@ -4,8 +4,6 @@ set -o errexit
 # Kathleen Chen 2017
 
 tcga_data_dir="./data/tcga_data"
-# path to the normalized expression dataset
-normalized_expression_dataset=$tcga_data_dir"/HiSeqV2_minmaxscale_normalized"
 # path to the PID pathway file
 pathway_file=$tcga_data_dir"/PID_pathway_definitions.txt"
 
@@ -17,9 +15,6 @@ mkdir -p $analysis_dir
 
 # network output directory will contain the generated network file
 network_output_dir=$analysis_dir"/network_construction"
-
-# count number of genes
-N_genes=$(expr $(wc -l <$normalized_expression_dataset) - 1)
 
 N_features=300
 

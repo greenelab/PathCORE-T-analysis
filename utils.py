@@ -4,7 +4,6 @@ in the PathCORE analysis scripts"""
 import os
 
 import pandas as pd
-from sklearn.preprocessing import MinMaxScaler
 
 
 def load_expression_dataset(path_to_file):
@@ -117,7 +116,7 @@ def load_weight_matrix(path_to_file,
     path_to_genes_file : str (default=None)
         A file of gene identifiers, 1 identifier per line. Used to handle the
         case where a weight matrix file does not already specify the gene
-        identifiers as row names. 
+        identifiers as row names.
 
     Returns
     -----------
@@ -163,30 +162,3 @@ def _weight_matrix_file_skip_rows(path_to_file, n_features, kwargs):
             data = current_line.split("\t")
         file.seek(pos)
         return pd.read_csv(file, **kwargs)
-
-
-def expression_data_minmax_normalization(path_to_file, index_on_col):
-    """Used to normalize the TCGA expression dataset.
-
-    Parameters
-    -----------
-    path_to_file : str
-        TThe path to the expression dataset.
-        Currently expects a tab-delimited file with row and column names,
-        where the rows are the genes and the columns are the samples.
-    index_on_col : str
-        Name of the column that should be the dataframe's index
-
-    Returns
-    -----------
-    pandas.DataFrame
-    """
-    data = pd.read_table(path_to_file)
-    data.set_index(index_on_col, inplace=True)
-    data = data[-data.index.str.contains('?', regex=False)]
-    data = data.sort_index()
-
-    data_normalized = MinMaxScaler().fit_transform(data.T)
-    data_normalized = pd.DataFrame(
-        data_normalized, index=data.columns, columns=data.index).T
-    return data_normalized

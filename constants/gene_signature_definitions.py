@@ -1,5 +1,5 @@
 """Stores the gene signature definitions that can be used in
-`build_co_occurrence_network.py`.
+`run_network_creation.py`.
 
 NOTE: any arguments passed in to the top-level
 `define_<model>_gene_signature` function must be cast
@@ -7,7 +7,7 @@ into the type specified in the function's documentation
 because docopt will parse the signature argument input as a string.
 (Refers to:
   - lines 31, 68 below
-  - lines 266-268 in `build_co_occurrence_network.py`)
+  - lines 268-270 in `run_network_creation.py`)
 """
 from functools import partial
 
@@ -66,6 +66,7 @@ def define_NMF_gene_signature(std):
     positive and negative gene signatures.
     """
     std = float(std)  # see note on line 4.
+
     def _gene_signature(feature_weight_vector, std):
         mean = feature_weight_vector.mean()
         cutoff = std * feature_weight_vector.std()
@@ -75,7 +76,8 @@ def define_NMF_gene_signature(std):
         return (positive_gene_signature, set())
     return partial(_gene_signature, std=std)
 
+
 GENE_SIGNATURE_DEFINITIONS = {
-	"eADAGE": define_eADAGE_gene_signature,
-	"NMF": define_NMF_gene_signature
+    "eADAGE": define_eADAGE_gene_signature,
+    "NMF": define_NMF_gene_signature
 }

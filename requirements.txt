@@ -1,3 +1,4 @@
+### required python packages and the versions that have been tested on ###
 docopt==0.6.2
 joblib==0.11
 pandas==0.20.1

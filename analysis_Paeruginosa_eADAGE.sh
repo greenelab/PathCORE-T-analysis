@@ -21,7 +21,6 @@ mkdir -p $analysis_dir
 #   - pathway definitions for each feature after crosstalk removal
 #   - positive and negative gene signature sets for each feature
 network_output_dir=$analysis_dir"/network_construction"
-#mkdir -p $network_output_dir
 
 # count number of genes
 N_genes=$(expr $(wc -l <$data_compendium) - 1)
@@ -55,10 +54,11 @@ mkdir -p log
 # Generates the significant pathways files, network files, and metadata from
 # running the analysis on all models in $ensemble_directory.
 python run_network_creation.py $models_dir $network_output_dir $pathway_file \
---n-genes=$N_genes --n-features=$N_features \
---signature=eADAGE --signature-args=$std_cutoff \
---alpha=$alpha --genes-list=$pa_genes --n-cores=$N_cores --shorten=PAO1_KEGG \
---overlap-correction --all-genes --metadata \
+                               --n-genes=$N_genes --n-features=$N_features \
+                               --signature=eADAGE --signature-args=$std_cutoff \
+                               --alpha=$alpha --genes-list=$pa_genes \
+                               --n-cores=$N_cores --shorten=PAO1_KEGG \
+                               --overlap-correction --all-genes --metadata \
 > ./log/analysis_PAO1_eADAGE.log
 
 # Builds a network of pathway co-occurrence relationships for
@@ -69,26 +69,11 @@ N_permutations=10000
 
 permutation_output_dir=$analysis_dir"/permutation_test_n="$N_permutations
 
-python run_permutation_test.py \
-$network_output_dir $permutation_output_dir \
---n-permutations=$N_permutations --n-features=$N_features \
---n-cores=$N_cores \
+python run_permutation_test.py $network_output_dir $permutation_output_dir \
+                               --n-permutations=$N_permutations \
+                               --n-features=$N_features \
+                               --n-cores=$N_cores \
 >> ./log/analysis_PAO1_eADAGE.log
-
-###############################################################################
-# PAO1 <> eADAGE <> KEGG web application DB setup
-###############################################################################
-
-filtered_network=$permutation_output_dir"/filtered_network.tsv"
-
-# NOTE: this file must be edited after a user has set up an MLab account.
-db_credentials_file="./eadage.yml"
-
-python web_initialize_db.py \
-$data_compendium $pathway_file $filtered_network $network_output_dir \
-$db_credentials_file --models=10 --features=300 --is-pathcore-example
-
-python web_edge_page_data.py $filtered_network $db_credentials_file
 
 wait
 echo "The PAO1 eADAGE analysis has finished."

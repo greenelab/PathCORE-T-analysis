@@ -31,9 +31,6 @@ Options:
                                 DB credentials to access an mLab-served MongoDB
                                 database.
 
-    --models=<n-models>         Number of models from which the final PathCORE
-                                network was built.
-
     --features=<n-features>     Number of features constructed in each model.
 
     --is-pathcore-example       Sample annotations and common names are
@@ -109,7 +106,6 @@ if __name__ == "__main__":
     network_file = arguments["<network>"]
     enrichment_analysis_dir = arguments["<enrichment-analysis-dir>"]
     db_credentials_file = arguments["<db-credentials>"]
-    n_models = int(arguments["--models"])
     n_features = int(arguments["--features"])
 
     is_example = arguments["--is-pathcore-example"]

@@ -16,8 +16,10 @@ the PathCORE paper.
 
 Output:
     - <significant-edges-file> [default: significant_edges.tsv]
-      significant edges with the following columms:
-      pw0, pw1, p-value, q-value (FDR-corrected p-value), odds ratio
+      significant edges with the following columns:
+        pw0, pw1, p-value, q-value (FDR-corrected p-value), odds ratio
+      where pw0 (pathway 0) and pw1 (pathway 1) are the two pathways
+      that share an edge.
 
     - <filtered-network-file> [default: filtered_network.tsv]
       Network file that only contains the edges
@@ -151,10 +153,10 @@ if __name__ == "__main__":
           "{2} seconds to run on {3} core(s).".format(
               n_permutations, n_networks, t_f, n_cores))
 
-    # returns a CoNetwork object (the network is also written
-    # to `arguments["--network-out"]`, so we do not use
-    # the return value in this situation)
-    _ = network_edges_permutation_test(
+    # this function returns a CoNetwork object. because the network is
+    # also written to `arguments["--network-out"]`, we ignore the
+    # return value in this context.
+    network_edges_permutation_test(
         aggregate_observed_network, permutations, alpha,
         n_networks=n_networks,
         output_edges_to_file=os.path.join(

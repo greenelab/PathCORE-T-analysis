@@ -38,7 +38,7 @@ Options:
 import sys
 
 from docopt import docopt
-from pymongo import ASCENDING  # for indexing the collection
+from pymongo import ASCENDING  # for indexing the Collection
 from pymongo import MongoClient
 import pandas as pd
 import yaml
@@ -109,7 +109,6 @@ class EdgeInfo:
         """
         pw0_info = self.db.pathways.find_one({"pathway": pw0_name})
         pw1_info = self.db.pathways.find_one({"pathway": pw1_name})
-
         pw0_id = pw0_info["_id"]
         pw1_id = pw1_info["_id"]
 
@@ -187,7 +186,10 @@ class EdgeInfo:
         odds_ratios_above_one = []
         for gene_id, odds_ratio in odds_ratios.items():
             if odds_ratio > 1.:
-                gene_name = self.db.genes.find_one({"_id": gene_id})["gene"]
+                gene = self.db.genes.find_one({"_id": gene_id})
+                gene_name = gene["gene"]
+                if "common_name" in gene:
+                    gene_name = gene["common_name"]
                 odds_ratios_above_one.append(
                     (str(gene_name), odds_ratio, which_pathway[gene_id]))
 
@@ -209,7 +211,9 @@ class EdgeInfo:
         # `norm_sample_matrix` shape = [n_genes, n_samples]
         for gene_name, odds_ratio, belongs_to in gene_odds_ratio_list:
             norm_sample_matrix.append(
-                self.db.genes.find_one({"gene": gene_name})["expression"])
+                self.db.genes.find_one(
+                    {"$or": [{"gene": gene_name},
+                             {"common_name": gene_name}]})["expression"])
             sum_odds_ratios += odds_ratio
 
         # transpose => shape [n_samples, n_genes]

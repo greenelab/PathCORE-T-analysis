@@ -47,7 +47,7 @@ def load_pathway_definitions(path_to_file, shorten_pathway_names=None):
     """
     pathway_definitions = pd.read_table(
         path_to_file, header=None,
-        names=["pw", "size", "genes"], usecols=["pw", "genes"])
+        names=["pw", "size", "genes"])
     pathway_definitions["genes"] = pathway_definitions["genes"].map(
         lambda x: x.split(";"))
     pathway_definitions.set_index("pw", inplace=True)
@@ -87,10 +87,8 @@ def load_significant_pathways_file(path_to_file, shorten_pathway_names=None):
     return significant_pathways
 
 
-def load_weight_matrix(path_to_file,
-                       n_features,
-                       n_genes=None,
-                       path_to_genes_file=None):
+def load_weight_matrix(path_to_file, n_features,
+                       n_genes=None, path_to_genes_file=None):
     """
     Parameters
     -----------

@@ -31,9 +31,6 @@ Options:
                                 DB credentials to access an mLab-served MongoDB
                                 database.
 
-    --models=<n-models>         Number of models from which the final PathCORE
-                                network was built.
-
     --features=<n-features>     Number of features constructed in each model.
 
     --is-pathcore-example       Sample annotations and common names are
@@ -50,7 +47,7 @@ import sys
 from docopt import docopt
 import pandas as pd
 from pathcore import CoNetwork
-import pymongo
+from pymongo import ASCENDING  # for indexing the Collection
 from pymongo import MongoClient
 import yaml
 
@@ -109,7 +106,6 @@ if __name__ == "__main__":
     network_file = arguments["<network>"]
     enrichment_analysis_dir = arguments["<enrichment-analysis-dir>"]
     db_credentials_file = arguments["<db-credentials>"]
-    n_models = int(arguments["--models"])
     n_features = int(arguments["--features"])
 
     is_example = arguments["--is-pathcore-example"]
@@ -162,7 +158,7 @@ if __name__ == "__main__":
         gene_and_expression_values_list.append(gene_expression_values)
     gene_object_ids = genes.insert_many(
         gene_and_expression_values_list, ordered=True)
-    genes.create_index([("gene", pymongo.ASCENDING)])
+    genes.create_index([("gene", ASCENDING)])
 
     # mapping the gene name to the gene object ID
     gene_to_object_id = {}

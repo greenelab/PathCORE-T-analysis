@@ -38,11 +38,12 @@ mkdir -p log
 
 # Generates the significant pathways files and metadata from the
 # feature overrepresentation analysis on the model in $network_output_directory.
-python run_network_creation.py \
-$nmf_dir $network_output_dir $pathway_file \
---n-features=$N_features --signature=NMF --signature-args=$std_cutoff \
---alpha=$alpha --n-cores=$N_cores --shorten=TCGA_PID \
---overlap-correction --all-genes \
+python run_network_creation.py $nmf_dir $network_output_dir $pathway_file \
+                               --n-features=$N_features \
+                               --signature=NMF --signature-args=$std_cutoff \
+                               --alpha=$alpha --n-cores=$N_cores \
+                               --shorten=TCGA_PID \
+                               --overlap-correction --all-genes \
 > ./log/analysis_TCGA_NMF.log
 
 # Builds a network of pathway co-occurrence relationships for
@@ -53,10 +54,10 @@ N_permutations=10000
 
 permutation_output_dir=$analysis_dir"/permutation_test_N="$N_permutations
 
-python run_permutation_test.py \
-$network_output_dir $permutation_output_dir \
---n-permutations=$N_permutations --n-features=$N_features \
---n-cores=$N_cores \
+python run_permutation_test.py $network_output_dir $permutation_output_dir \
+                               --n-permutations=$N_permutations \
+                               --n-features=$N_features \
+                               --n-cores=$N_cores \
 >> ./log/analysis_TCGA_NMF.log
 
 wait

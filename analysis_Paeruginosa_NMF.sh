@@ -49,10 +49,11 @@ mkdir -p log
 # Generates the significant pathways and network files from the
 # feature overrepresentation analysis on all models in $nmf_dir.
 python run_network_creation.py $nmf_dir $network_output_dir $pathway_file \
---n-genes=$N_genes --n-features=$N_features \
---signature=NMF --signature-args=$std_cutoff \
---alpha=$alpha --n-cores=$N_cores --shorten=PAO1_KEGG \
---overlap-correction --all-genes \
+                               --n-genes=$N_genes --n-features=$N_features \
+                               --signature=NMF --signature-args=$std_cutoff \
+                               --alpha=$alpha --n-cores=$N_cores \
+                               --shorten=PAO1_KEGG \
+                               --overlap-correction --all-genes \
 > ./log/analysis_PAO1_NMF.log
 
 
@@ -64,10 +65,10 @@ N_permutations=10000
 
 permutation_output_dir=$analysis_dir"/permutation_test_n="$N_permutations
 
-python run_permutation_test.py \
-$network_output_dir $permutation_output_dir \
---n-permutations=$N_permutations --n-features=$N_features \
---n-cores=$N_cores \
+python run_permutation_test.py $network_output_dir $permutation_output_dir \
+                               --n-permutations=$N_permutations \
+                               --n-features=$N_features \
+                               --n-cores=$N_cores \
 >> ./log/analysis_PAO1_NMF.log
 
 wait

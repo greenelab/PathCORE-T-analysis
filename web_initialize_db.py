@@ -47,7 +47,7 @@ import sys
 from docopt import docopt
 import pandas as pd
 from pathcore import CoNetwork
-import pymongo
+from pymongo import ASCENDING  # for indexing the Collection
 from pymongo import MongoClient
 import yaml
 
@@ -158,7 +158,7 @@ if __name__ == "__main__":
         gene_and_expression_values_list.append(gene_expression_values)
     gene_object_ids = genes.insert_many(
         gene_and_expression_values_list, ordered=True)
-    genes.create_index([("gene", pymongo.ASCENDING)])
+    genes.create_index([("gene", ASCENDING)])
 
     # mapping the gene name to the gene object ID
     gene_to_object_id = {}

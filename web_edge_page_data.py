@@ -38,7 +38,7 @@ Options:
 import sys
 
 from docopt import docopt
-from pymongo import ASCENDING  # for indexing the collection
+from pymongo import ASCENDING  # for indexing the Collection
 from pymongo import MongoClient
 import pandas as pd
 import yaml

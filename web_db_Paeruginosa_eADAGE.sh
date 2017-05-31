@@ -7,7 +7,9 @@ set -o errexit
 # PAO1 <> eADAGE <> KEGG web application DB setup
 ###############################################################################
 
-pa_data_dir="./data/pao1_data"
+# These are the filepaths and constants used in both this script
+# and the PAO1 eADAGE analysis script (./analysis_Paeruginosa_eADAGE.sh)
+source ./common_Paeruginosa_eADAGE.sh 
 
 filtered_network=$permutation_output_dir"/filtered_network.tsv"
 
@@ -20,3 +22,7 @@ python web_initialize_db.py $data_compendium $pathway_file $filtered_network \
                             --features=300 --is-pathcore-example
 
 python web_edge_page_data.py $filtered_network $db_credentials_file
+
+wait
+echo "The PAO1 eADAGE web application DB setup has finished."
+exit 0

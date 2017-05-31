@@ -2,6 +2,7 @@
 set -o errexit
 
 # Kathleen Chen 2017
+# Script used to generate the NMF models provided in this repository
 
 N_features=300
 
@@ -29,6 +30,3 @@ tcga_nmf_file=$tcga_nmf_dir"/NMF_"$N_features"_features.tsv"
 # Generates the NMF k=300 model from the TCGA Pan-Cancer expression dataset
 python ../data_generate_NMF_model.py \
 $normalized_pancan_file $tcga_nmf_file $N_features
-
-
-

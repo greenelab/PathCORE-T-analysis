@@ -73,6 +73,8 @@ rm $tcga_data_dir"/PANCAN_mutation"
 # this repository. Because Github limits file size to <50 Mb, the TCGA NMF
 # model is provided as a .tar.gz and decompressed here.
 tcga_NMF_model_dir=$tcga_data_dir"/NMF_model"
+mkdir -p $tcga_NMF_model_dir
+
 tcga_NMF_model_compressed=$tcga_data_dir"/NMF_300_features.tar.gz"
 tar -xzvf $tcga_NMF_model_compressed -C $tcga_NMF_model_dir
 

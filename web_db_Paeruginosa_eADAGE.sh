@@ -15,7 +15,7 @@ filtered_network=$permutation_output_dir"/filtered_network.tsv"
 
 # NOTE: Please create this file after you have set up an mLab account and
 # a MongoDB instance with a database user (see README)
-db_credentials_file="./db_credentials.yml"
+db_credentials_file="./db-credentials.yml"
 
 python web_initialize_db.py $data_compendium $pathway_file $filtered_network \
                             $network_output_dir $db_credentials_file \

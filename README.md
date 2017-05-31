@@ -120,17 +120,17 @@ carried out by running `web_db_Paeruginosa_eADAGE.sh`.
 
 ### Step 1: mLab setup
 - Register for an mLab account at mLab.com.
-- Create a free sandbox database (0.5 GB).
-- Add a user to the new database that has write-access.
+- *Create new*: Create a free sandbox database (0.5 GB).
+- Database *Users* tab: Add a user to the new database that has write-access.
 - Create a credentials file (see example-mLab-credentials.yml)
 
 ### Step 2: Run `setup_pathcore_db.py`
 
 ### Step 3: Run `cache_pathcore_edge_pages.py`
 
-### Step 4: Modify the PathCORE-demo-app source
+### Step 4: Modify the PathCORE-demo source code
 NOTE: links will be added here once the repository is public.
-Fork the PathCORE-demo-app repository. Follow the setup instructions in the
+Fork the PathCORE-demo repository. Follow the setup instructions in the
 repository's README. Update the eADAGE, KEGG PAO1-specific text to
 instead describe your analysis.
 

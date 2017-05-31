@@ -3,6 +3,10 @@ set -o errexit
 
 # Kathleen Chen 2017
 
+# This file stores the variables used in both the
+# ./analysis_Paeruginosa_eADAGE.sh and
+# ./web_db_Paeruginosa_eADAGE.sh scripts.
+
 pa_data_dir="./data/pao1_data"
 # path to the data compendium file
 data_compendium=$pa_data_dir"/all-pseudomonas-gene-normalized.pcl"

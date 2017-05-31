@@ -297,6 +297,7 @@ if __name__ == "__main__":
                                  keep_n_samples=keep_n_samples,
                                  keep_n_genes=keep_n_genes)
 
+    print("Started PathCORE edge data insertion operations")
     edge_info_list = []
     for index, row in network.iterrows():
         edge_info = compute_edge_info.get_edge_info(
@@ -308,4 +309,4 @@ if __name__ == "__main__":
     db.pathcore_edge_data.create_index(
          [("edge", ASCENDING),
           ("weight_odds_ratio", ASCENDING)])
-    print("Completed the PathCORE demo server insert operations")
+    print("Completed PathCORE edge data insertion operations")

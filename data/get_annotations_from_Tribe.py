@@ -20,14 +20,14 @@ import requests
 import sys
 import csv
 
-TRIBE_URL = 'http://tribe.greenelab.com'
+TRIBE_URL = 'https://tribe.greenelab.com'
 limit = 2000  # this limits the number of items to return at one time
 
 
 def get_terms(offset=None, target=None):
     '''
-    this function queries the Tribe web server to get KEGG or GO terms for
-    pseudomonas.
+    This function queries the Tribe web server to get KEGG or GO terms for
+    Pseudomonas.
 
     input:
         offset  get terms after the offset, used if the query limit is exceeded
@@ -35,10 +35,13 @@ def get_terms(offset=None, target=None):
     return:
         a list of geneset dictionaries with the format (geneset title: [genes])
     '''
-    # Pseudomonas aeruginosa is organism number 9 in Tribe
-    parameters = {'show_tip': 'true', 'organism': 9, 'xrdb': 'Symbol',
-                  'limit': limit, 'offset': offset}
-    r = requests.get(TRIBE_URL + '/api/v1/geneset/?title__startswith='+target,
+    parameters = {'show_tip': 'true',
+                  'organism__scientific_name': 'Pseudomonas aeruginosa',
+                  'xrdb': 'Symbol',
+                  'limit': limit,
+                  'offset': offset,
+                  'title__startswith': target}
+    r = requests.get(TRIBE_URL + '/api/v1/geneset/',
                      params=parameters)
 
     print(r.status_code)
@@ -51,8 +54,8 @@ def get_terms(offset=None, target=None):
         if geneset['tip'] is None:  # skip it if the tip version is None
             continue
         # only download genesets within (5,100) size
-        if (len(geneset['tip']['genes']) > 100) or\
-           (len(geneset['tip']['genes']) < 5):
+        geneset_size = len(geneset['tip']['genes'])
+        if (geneset_size > 100 or geneset_size < 5):
             continue
         else:
             new_geneset = {}
@@ -60,7 +63,7 @@ def get_terms(offset=None, target=None):
             new_geneset['genes'] = geneset['tip']['genes']
             simplified_genesets.append(new_geneset)
     if count == limit:
-        print('Need to increase the limit.')
+        print("Need to increase the 'limit' parameter in the geneset request.")
     return simplified_genesets
 
 

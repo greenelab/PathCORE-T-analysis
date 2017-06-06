@@ -21,8 +21,8 @@ each of the figures in this format.
 Please review one of the `analysis_<dataset>_<model>.sh` scripts for an example
 of the workflow.
 
-In the figure below, *(a)* is used to generate the weight matrix and *(b)*
-specifies the inputs to the PathCORE analysis *(c)*:
+In the figure below, **(a)** is used to generate the weight matrix and **(b)**
+specifies the inputs to the PathCORE analysis in **(c)**:
 
 ![PathCORE analysis workflow diagram](figures/Figure4.PNG?raw=true)
 

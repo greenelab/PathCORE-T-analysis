@@ -131,7 +131,7 @@ carried out by running [web_db_Paeruginosa_eADAGE.sh](web_db_Paeruginosa_eADAGE.
 - Register for an mLab account at mLab.com.
 - *Create new*: Create a free sandbox database (0.5 GB).
 - Database *Users* tab: Add a user to the new database that has write-access.
-- Create a credentials file (see example-mLab-credentials.yml)
+- Create a credentials file (see [example-mLab-credentials.yml](example-mLab-credentials.yml))
 
 ### Step 2: Run `web_initialize_db.py`
 

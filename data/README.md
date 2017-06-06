@@ -36,9 +36,7 @@ The files in `./pao1_web_info` were obtained from the following sources
 ### Sample annotations file
 The sample annotations file `PseudomonasAnnotation.tsv` was retrieved by running
 
-```sh
-curl -o PseudomonasAnnotation.tsv https://raw.githubusercontent.com/greenelab/adage-server/00b2d19668516910c7b968f4164005cf5a59ddd6/data/PseudomonasAnnotation.tsv
-```
+    curl -o PseudomonasAnnotation.tsv https://raw.githubusercontent.com/greenelab/adage-server/00b2d19668516910c7b968f4164005cf5a59ddd6/data/PseudomonasAnnotation.tsv
 
 and is from the
 [Greene Lab `adage-server`](https://github.com/greenelab/adage-server)
@@ -55,9 +53,7 @@ bioRxiv 2016, :078659.
 The gene information file `Pseudomonas_aeruginosa_PAO1.gene_info` was retrieved
 by running
 
-```sh
-curl -O ftp://ftp.ncbi.nih.gov/gene/DATA/GENE_INFO/Archaea_Bacteria/Pseudomonas_aeruginosa_PAO1.gene_info.gz
-gunzip Pseudomonas_aeruginosa_PAO1.gene_info.gz
-```
+    curl -O ftp://ftp.ncbi.nih.gov/gene/DATA/GENE_INFO/Archaea_Bacteria/Pseudomonas_aeruginosa_PAO1.gene_info.gz
+    gunzip Pseudomonas_aeruginosa_PAO1.gene_info.gz
 
 **Additional information**: [NCBI -- Using Gene](https://www.ncbi.nlm.nih.gov/gene)

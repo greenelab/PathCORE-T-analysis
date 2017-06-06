@@ -28,7 +28,7 @@ under the [Creative Commons Attribution 4.0 International
 License](https://creativecommons.org/licenses/by/4.0/). We have provided a copy
 of it here for versioning. The script `./get_pid_pathway_definitions.py`
 parses the `.gmt` file and produces the PID pathway definitions file (see line
-[TODO] in `./download_data.sh`).
+89 in `./download_data.sh`).
 
 ## _P. aeruginosa_ KEGG network demo server information
 The files in `./pao1_web_info` were obtained from the following sources

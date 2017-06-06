@@ -50,6 +50,7 @@ bioRxiv 2016, :078659.
 ### Gene identifier information
 The gene information file `Pseudomonas_aeruginosa_PAO1.gene_info` was retrieved
 by running
+
 	curl -O ftp://ftp.ncbi.nih.gov/gene/DATA/GENE_INFO/Archaea_Bacteria/Pseudomonas_aeruginosa_PAO1.gene_info.gz
 
 	gunzip Pseudomonas_aeruginosa_PAO1.gene_info.gz

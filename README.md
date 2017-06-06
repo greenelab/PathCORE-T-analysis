@@ -21,6 +21,11 @@ each of the figures in this format.
 Please review one of the `analysis_<dataset>_<model>.sh` scripts for an example
 of the workflow.
 
+In the figure below, *(a)* is used to generate the weight matrix and *(b)*
+specifies the inputs to the PathCORE analysis *(c)*:
+
+![PathCORE analysis workflow diagram](figures/Figure4.PNG?raw=true)
+
 ### Scripts (in order of execution):
 1. [run_network_creation.py](run_network_creation.py)
 

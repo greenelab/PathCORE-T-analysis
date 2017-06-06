@@ -1,0 +1,45 @@
+pw0	pw1	pvalue	qvalue	odds_ratio
+Benzoate degradation PAO1	Valine, leucine and isoleucine degradation PAO1	0.0	0.0	3.615828133638733
+RNA degradation PAO1	Ribosome PAO1	0.0	0.0	4.170662310975289
+Cyanoamino acid metabolism PAO1	Quorum sensing PAO1	0.0	0.0	3.804127052722558
+Bacterial chemotaxis PAO1	Flagellar assembly PAO1	0.0	0.0	5.165027146159221
+Aminobenzoate degradation PAO1	Benzoate degradation PAO1	0.0	0.0	4.173373939525778
+Fatty acid biosynthesis PAO1	Purine metabolism PAO1	0.0009	0.0311315789474	3.263333952796878
+Iron complex transport system	Zinc transport system	0.0003	0.0147875	2.8506787330316743
+Citrate cycle (TCA cycle) PAO1	Oxidative phosphorylation PAO1	0.0	0.0	3.720056921495771
+Ribosome PAO1	Ribosome, bacteria	0.0	0.0	3.8925178508435816
+D-Methionine transport system	Sulfur metabolism PAO1	0.0006	0.024475862069	1.9809825673534072
+Histidine metabolism PAO1	Valine, leucine and isoleucine degradation PAO1	0.0015	0.04225	2.9218675559790377
+Purine metabolism PAO1	Ribosome, bacteria	0.0011	0.0333666666667	2.7350451567203824
+Oxidative phosphorylation PAO1	Ribosome, bacteria	0.0003	0.0147875	2.2415493589168833
+Lipopolysaccharide biosynthesis PAO1	Terpenoid backbone biosynthesis PAO1	0.0006	0.024475862069	1.9837618403247632
+Oxidative phosphorylation PAO1	Ribosome PAO1	0.0	0.0	2.9108581199658015
+Quorum sensing PAO1	Vanadium resistance, efflux pump MexGHI-OpmD	0.0	0.0	3.8572963294538942
+Glycine betaine/proline transport system	Glycine, serine and threonine metabolism PAO1	0.0	0.0	2.871531966224367
+Citrate cycle (TCA cycle) PAO1	Purine metabolism PAO1	0.0017	0.0457068181818	3.1898393238599425
+Protein export PAO1	Terpenoid backbone biosynthesis PAO1	0.0016	0.0440186046512	1.9548660084626235
+Dipeptide transport system	Tyrosine metabolism PAO1	0.001	0.0311315789474	3.372409972299169
+Citrate cycle (TCA cycle) PAO1	Pyrimidine metabolism PAO1	0.0002	0.0112666666667	3.6429026098026736
+Glyoxylate and dicarboxylate metabolism PAO1	Tyrosine metabolism PAO1	0.0014	0.0403951219512	2.979606122829942
+Oxidative phosphorylation PAO1	Purine metabolism PAO1	0.0002	0.0112666666667	3.7264065335753176
+Phosphate transport system	Phosphonate and phosphinate metabolism PAO1	0.0	0.0	2.8586156111929304
+Folate biosynthesis PAO1	Terpenoid backbone biosynthesis PAO1	0.0001	0.00622631578947	1.995381062355658
+2-Oxocarboxylic acid metabolism PAO1	Purine metabolism PAO1	0.0013	0.0384475	3.1222612477002842
+D-Methionine transport system	NitT/TauT family transport system	0.0003	0.0147875	1.980707395498392
+Lipopolysaccharide biosynthesis PAO1	Protein export PAO1	0.0	0.0	3.6999101527403413
+Dipeptide transport system	Valine, leucine and isoleucine degradation PAO1	0.0	0.0	3.7495056553033304
+Citrate cycle (TCA cycle, Krebs cycle)	Macrolide resistance, MacAB-TolC transporter	0.001	0.0311315789474	1.9674074074074075
+Oxidative phosphorylation PAO1	RNA degradation PAO1	0.0009	0.0311315789474	3.1674794661190964
+Pyrimidine metabolism PAO1	Thiamine metabolism PAO1	0.0009	0.0311315789474	1.9787485242030698
+RNA degradation PAO1	Ribosome, bacteria	0.0001	0.00622631578947	3.0604358965359912
+Putative polar amino acid transport system	Sulfur metabolism PAO1	0.0	0.0	3.7019766852508873
+Glutamate/aspartate transport system	Putrescine transport system	0.0005	0.02366	2.774767801857585
+NitT/TauT family transport system	Sulfur metabolism PAO1	0.0	0.0	2.9141164856860806
+Folate biosynthesis PAO1	One carbon pool by folate PAO1	0.001	0.0311315789474	1.9675324675324675
+Macrolide resistance, MacAB-TolC transporter	Zinc transport system	0.0	0.0	2.880916030534351
+Citrate cycle (TCA cycle) PAO1	Ribosome, bacteria	0.0006	0.024475862069	2.372983390718725
+Tyrosine metabolism PAO1	Valine, leucine and isoleucine degradation PAO1	0.0	0.0	2.567787465099947
+Purine metabolism PAO1	Ribosome PAO1	0.0006	0.024475862069	3.2492679355783305
+Fatty acid biosynthesis PAO1	Ribosome PAO1	0.001	0.0311315789474	3.208535402521824
+Citrate cycle (TCA cycle) PAO1	Ribosome PAO1	0.0009	0.0311315789474	2.809792722838991
+D-Methionine transport system	Putative polar amino acid transport system	0.0007	0.0276033333333	1.97869101978691

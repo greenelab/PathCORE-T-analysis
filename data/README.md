@@ -35,7 +35,9 @@ The files in `./pao1_web_info` were obtained from the following sources
 
 ### Sample annotations file
 The sample annotations file `PseudomonasAnnotation.tsv` was retrieved by running
+
     curl -o PseudomonasAnnotation.tsv https://raw.githubusercontent.com/greenelab/adage-server/00b2d19668516910c7b968f4164005cf5a59ddd6/data/PseudomonasAnnotation.tsv
+
 and is from the
 [Greene Lab `adage-server`](https://github.com/greenelab/adage-server)
 repository (`data` directory).

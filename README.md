@@ -125,6 +125,8 @@ carried out by running [web_db_Paeruginosa_eADAGE.sh](web_db_Paeruginosa_eADAGE.
    Utility files in support of the PAO1 example. Gets the gene common names
    and sample annotations information.
 
+## PathCORE web application setup
+
 ### Step 1: mLab setup
 - Register for an mLab account at mLab.com.
 - *Create new*: Create a free sandbox database (0.5 GB).

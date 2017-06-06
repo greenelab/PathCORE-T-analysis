@@ -5,10 +5,9 @@ set -o errexit
 
 pip install -r requirements.txt
 
-# TODO: will be available in the next pull request.
-# cd data
-# ./download_data.sh
-# cd ..
+cd data
+./download_data.sh
+cd ..
 
 wait 
 

@@ -1,8 +1,9 @@
 # Overview
 This repository contains the scripts to run the analyses described in the
-PathCORE paper. Running `./ANALYSIS.sh` is sufficient to reproduce
-the results in the paper. To use PathCORE in your own analyses, please
-review the sections from *The PathCORE analysis workflow* onwards in
+PathCORE-T paper. Running `./ANALYSIS.sh` is sufficient to reproduce
+the results in the paper. To use PathCORE-T in your own analyses, please
+review the sections from
+[The PathCORE-T analysis workflow](#the-pathcore-analysis-workflow) onwards in
 this README.
 
 ## The [data](data) directory
@@ -10,21 +11,21 @@ A README is provided in the `./data` directory with details about the scripts
 to download and/or process datasets, data source citations, etc.
 
 ## The [figures](figures) directory
-All figures in the PathCORE paper are also available here.
+All figures in the PathCORE-T paper are also available here.
 
 ## The [jupyter-notebooks](jupyter-notebooks) directory
 Scripts used to generate Figure 3 and Supplemental Figure 2 are provided
 in notebook format. We have found that we can offer greater detail about
 each of the figures in this format.
 
-## The PathCORE analysis workflow
+## The PathCORE-T analysis workflow
 Please review one of the `analysis_<dataset>_<model>.sh` scripts for an example
 of the workflow.
 
 In the figure below, **(a)** is used to generate the weight matrix and **(b)**
-specifies the inputs to the PathCORE analysis in **(c)**:
+specifies the inputs to the PathCORE-T analysis in **(c)**:
 
-![PathCORE analysis workflow diagram](figures/Figure4.PNG?raw=true)
+![PathCORE-T analysis workflow diagram](figures/Figure4.PNG?raw=true)
 
 ### Scripts (in order of execution):
 1. [run_network_creation.py](run_network_creation.py)
@@ -52,7 +53,7 @@ specifies the inputs to the PathCORE analysis in **(c)**:
    This module allows for import of two dictionaries:
    `GENE_SIGNATURE_DEFINITIONS` and `SHORTEN_PATHWAY_NAMES`.
    These are intended to be modified when you need to run
-   PathCORE using a feature construction algorithm and/or
+   PathCORE-T using a feature construction algorithm and/or
    pathway definitions different from those in our case studies.
 
    In most cases, the files in `constants` should be the only
@@ -64,7 +65,7 @@ specifies the inputs to the PathCORE analysis in **(c)**:
 
 ## Web application database setup
 Here we describe the steps taken to prepare the database that backs the
-[PathCORE demo application](https://pathcore-demo.herokuapp.com/).
+[PathCORE-T demo application](https://pathcore-demo.herokuapp.com/).
 The demo application is built on the
 [Flask microframework](http://flask.pocoo.org/) and deployed on
 [Heroku](https://www.heroku.com/). The database is a MongoDB instance
@@ -125,7 +126,7 @@ carried out by running [web_db_Paeruginosa_eADAGE.sh](web_db_Paeruginosa_eADAGE.
    Utility files in support of the PAO1 example. Gets the gene common names
    and sample annotations information.
 
-## PathCORE web application setup
+## PathCORE-T web application setup
 
 ### Step 1: mLab setup
 - Register for an mLab account at mLab.com.
@@ -137,8 +138,8 @@ carried out by running [web_db_Paeruginosa_eADAGE.sh](web_db_Paeruginosa_eADAGE.
 
 ### Step 3: Run `web_edge_page_data.py`
 
-### Step 4: The [PathCORE-demo source code](https://github.com/kathyxchen/PathCORE-demo)
-Fork the PathCORE-demo repository. Follow the setup instructions in the
+### Step 4: The [PathCORE-T-demo source code](https://github.com/kathyxchen/PathCORE-T-demo)
+Fork the PathCORE-T-demo repository. Follow the setup instructions in the
 repository's README. Update or remove any text or code specific to the
 eADAGE-based, KEGG PAO1 case study so that the web application accurately
 describes and supports your analysis.

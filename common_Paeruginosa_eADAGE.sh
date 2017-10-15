@@ -19,7 +19,7 @@ mkdir -p $analysis_dir
 
 # network output directory will contain (per model) the generated network file
 # and, if applicable, 3 metadata files in a directory `metadata`:
-#   - overrepresented pathways in each feature 
+#   - overrepresented pathways in each feature
 #   - pathway definitions for each feature after crosstalk removal
 #   - positive and negative gene signature sets for each feature
 network_output_dir=$analysis_dir"/network_construction"

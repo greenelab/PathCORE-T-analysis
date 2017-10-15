@@ -1,5 +1,5 @@
 """Stores functions to shorten pathway names, if desired, during
-PathCORE network file generation.
+PathCORE-T network file generation.
 Functions should take in a single input str (pathway name) and
 output a shortened version of the pathway name based on known
 conventions.

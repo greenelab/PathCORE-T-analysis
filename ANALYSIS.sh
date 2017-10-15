@@ -9,12 +9,12 @@ cd data
 ./download_data.sh
 cd ..
 
-wait 
+wait
 
 echo "Log information for all analyses is written to *.log files " \
 "in the './log' directory"
 
-# Scripts used to generate the results described in the PathCORE paper.
+# Scripts used to generate the results described in the PathCORE-T paper.
 # Ordered based on execution time of each script. They can be modified
 # and run independently of each other.
 

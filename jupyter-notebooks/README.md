@@ -2,7 +2,7 @@
 
 Two [Jupyter](http://jupyter.org/) notebooks in this directory
 demonstrate the analyses that support Figure 3 and Supplementary Figure 2
-in the PathCORE paper:
+in the PathCORE-T paper:
 - [Figure3_overlap_correction.ipynb](Figure3_overlap_correction.ipynb)
 - [Supplemental2_TCGA_NMF_features.ipynb](Supplemental2_TCGA_NMF_features.ipynb)
 
@@ -10,11 +10,11 @@ They must be run after `../ANALYSIS.sh`. Additional Python dependencies
 for the notebooks are specified in the `./requirements.txt` file for this
 directory.
 
-An additional notebook is included as a supplemental example of the PathCORE
+An additional notebook is included as a supplemental example of the PathCORE-T
 analysis workflow:
 - [Supplemental_PAO1_FastICA_example.ipynb](Supplemental_PAO1_FastICA_example.ipynb)
 
-In this notebook, we apply the PathCORE software to a FastICA model
+In this notebook, we apply the PathCORE-T software to a FastICA model
 of the normalized _P. aeruginosa_ gene compendium. We apply
 [scikit-learn's FastICA implementation](http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.fastica.html). 
 

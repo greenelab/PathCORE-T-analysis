@@ -1,5 +1,5 @@
 """A collection of utility functions (mostly file reading/writing) used
-in the PathCORE analysis scripts"""
+in the PathCORE-T analysis scripts"""
 
 import os
 

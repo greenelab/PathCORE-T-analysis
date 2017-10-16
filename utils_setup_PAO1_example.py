@@ -1,7 +1,7 @@
 """Functions used to process PAO1-specific information we want to
 provide in the web interface. A user can modify #TODO to setup a
 web application with the information most helpful for analyzing
-the edges in the user's PathCORE network.
+the edges in the user's PathCORE-T network.
 """
 import pandas as pd
 

@@ -10,7 +10,7 @@ produced by the same algorithm initialized with different random seeds.
                       k = number of features constructed.
 
 Defaults are set up for the P. aeruginosa eADAGE analysis provided
-in the PathCORE paper.
+in the PathCORE-T paper.
 
 Output (all .tsv files):
     Significant pathways files produced from the pathway overrepresentation
@@ -126,7 +126,7 @@ Options:
 
     -m --metadata               Collect metadata after overrepresentation
                                 analysis of each constructed feature.
-                                Used for setting up the PathCORE Flask
+                                Used for setting up the PathCORE-T Flask
                                 application.
                                 [default: False]
 """

@@ -35,7 +35,7 @@ Options:
 
     --is-pathcore-example       Sample annotations and common names are
                                 available for the P. aeruginosa (PAO1) KEGG
-                                case study described in the PathCORE paper.
+                                case study described in the PathCORE-T paper.
                                 This flag runs the functions that incorporate
                                 this information into the web interface for the
                                 PAO1 case.

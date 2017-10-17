@@ -5,7 +5,7 @@ Description:
 patterns) are constructed after taking the transpose of a size [n, m] dataset,
 where we assume the rows of the original input are the genes (n) and the
 columns are samples (m). This results in a model of size [n, k] that assigns
-n genes different weights in each of the k features, k <= m. The PathCORE
+n genes different weights in each of the k features, k <= m. The PathCORE-T
 analysis will use this as the input weight matrix.
 
 Usage:

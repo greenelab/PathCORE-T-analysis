@@ -1,4 +1,4 @@
-#!/bin/bash       
+#!/bin/bash
 set -o errexit
 
 # Kathleen Chen 2017

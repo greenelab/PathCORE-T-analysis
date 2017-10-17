@@ -12,7 +12,7 @@ Edges that are significant under their corresponding nulls
 final (aggregate, if applicable) network.
 
 Currently, defaults are set up for the eADAGE analysis provided in
-the PathCORE paper.
+the PathCORE-T paper.
 
 Output:
     - <significant-edges-file> [default: significant_edges.tsv]

@@ -18,7 +18,7 @@ Options:
     <network>                   Path to the network file that will be
                                 visualized on the web application. Expects
                                 that this is the network output from the
-                                permutation test in the full PathCORE analysis.
+                                permutation test in the full PathCORE-T analysis.
 
     <db-credentials>            Path to the .yml file containing the necessary
                                 DB credentials to access an mLab-served MongoDB
@@ -201,7 +201,7 @@ class EdgeInfo:
 
     def _edge_page_data(self, gene_odds_ratio_list):
         """Helper function creates the dict (MongoDB JSON object) that contains
-        all information needed for the PathCORE web application edge page.
+        all information needed for the PathCORE-T web application edge page.
         """
         if not gene_odds_ratio_list:  # no genes to display for this edge
             return {"flag": 1}
@@ -297,7 +297,7 @@ if __name__ == "__main__":
                                  keep_n_samples=keep_n_samples,
                                  keep_n_genes=keep_n_genes)
 
-    print("Started PathCORE edge data insertion operations")
+    print("Started PathCORE-T edge data insertion operations")
     edge_info_list = []
     for index, row in network.iterrows():
         edge_info = compute_edge_info.get_edge_info(
@@ -309,4 +309,4 @@ if __name__ == "__main__":
     db.pathcore_edge_data.create_index(
          [("edge", ASCENDING),
           ("weight_odds_ratio", ASCENDING)])
-    print("Completed PathCORE edge data insertion operations")
+    print("Completed PathCORE-T edge data insertion operations")

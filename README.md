@@ -6,6 +6,11 @@ review the sections from
 [The PathCORE-T analysis workflow](#the-pathcore-analysis-workflow) onwards in
 this README.
 
+We released two Python packages for PathCORE-T:
+- [PathCORE-T](https://github.com/greenelab/PathCORE-T)
+- [crosstalk-correction](https://github.com/kathyxchen/crosstalk-correction)
+The two packages are used in this analysis repository. 
+
 ## The [data](data) directory
 A README is provided in the `./data` directory with details about the scripts
 to download and/or process datasets, data source citations, etc.

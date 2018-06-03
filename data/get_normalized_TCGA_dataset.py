@@ -36,7 +36,7 @@ def expression_data_minmax_normalization(path_to_file, index_on_col):
     """
     data = pd.read_table(path_to_file)
     data.set_index(index_on_col, inplace=True)
-    data = data[-data.index.str.contains('?', regex=False)]
+    data = data[~data.index.str.contains('?', regex=False)]
     data = data.sort_index()
 
     data_normalized = MinMaxScaler().fit_transform(data.T)

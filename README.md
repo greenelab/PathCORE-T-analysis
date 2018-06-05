@@ -8,7 +8,8 @@ this README.
 
 We released two Python packages for PathCORE-T:
 - [PathCORE-T](https://github.com/greenelab/PathCORE-T)
-- [crosstalk-correction](https://github.com/kathyxchen/crosstalk-correction)
+- [crosstalk-correction](https://github.com/kathyxchen/crosstalk-correction): listed as a dependency in PathCORE-T
+
 The two packages are used in this analysis repository. 
 
 ## The [data](data) directory

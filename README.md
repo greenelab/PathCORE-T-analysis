@@ -23,6 +23,12 @@ Scripts used to generate Figure 3 and Supplemental Figure 2 are provided
 in notebook format. We have found that we can offer greater detail about
 each of the figures in this format.
 
+### Tutorials
+This directory also contains 2 notebooks that users can read through or run
+when they are getting started with PathCORE-T analysis:
+- [FastICA-based PAO1 KEGG example](jupyter-notebooks/Supplemental_PAO1_FastICA_example.ipynb)
+- [_k_=24 NMF-based TCGA PID example](jupyter-notebooks/Supplemental3_TCGA_NMF_k=24.ipynb)
+
 ## The PathCORE-T analysis workflow
 Please review one of the `analysis_<dataset>_<model>.sh` scripts for an example
 of the workflow.

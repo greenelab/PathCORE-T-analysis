@@ -6,6 +6,12 @@ review the sections from
 [The PathCORE-T analysis workflow](#the-pathcore-analysis-workflow) onwards in
 this README.
 
+We released two Python packages for PathCORE-T:
+- [PathCORE-T](https://github.com/greenelab/PathCORE-T)
+- [crosstalk-correction](https://github.com/kathyxchen/crosstalk-correction): listed as a dependency in PathCORE-T
+
+The two packages are used in this analysis repository. 
+
 ## The [data](data) directory
 A README is provided in the `./data` directory with details about the scripts
 to download and/or process datasets, data source citations, etc.
@@ -17,6 +23,12 @@ All figures in the PathCORE-T paper are also available here.
 Scripts used to generate Figure 3 and Supplemental Figure 2 are provided
 in notebook format. We have found that we can offer greater detail about
 each of the figures in this format.
+
+### Tutorials
+This directory also contains 2 notebooks that users can read through or run
+when they are getting started with PathCORE-T analysis:
+- [FastICA-based PAO1 KEGG example](jupyter-notebooks/Supplemental_PAO1_FastICA_example.ipynb)
+- [_k_=24 NMF-based TCGA PID example](jupyter-notebooks/Supplemental3_TCGA_NMF_k=24.ipynb)
 
 ## The PathCORE-T analysis workflow
 Please review one of the `analysis_<dataset>_<model>.sh` scripts for an example
